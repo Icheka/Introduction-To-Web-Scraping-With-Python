@@ -1,0 +1,12 @@
+<div class="product featured" data-featured-product="pr/123456">
+    <img src="some_long_path_to_an_image_of_a_cup" alt="product:123456" />
+    <div class="product-name">Gold-plated Cups!</div>
+</div>
+<div class="product last-featured">
+    <img src="some_long_path_to_an_image_of_a_spoon" alt="product:123457" />
+    <div class="product-name">Gold-plated Spoons</div>
+</div>
+<div class="product">
+    <img src="some_long_path_to_an_image_of_a_doorknob" alt="product:123456" />
+    <div class="product-name">Gold-plated Doorknobs</div>
+</div>
