@@ -3,24 +3,12 @@ from bs4 import BeautifulSoup
 # we'll use the datetime module to get today's date
 from datetime import date
 
-#url = "our_fictional_url"
+url = "our_fictional_url"
 
-#html = urlopen(url)
-html = """<div class="product featured" data-featured-product="pr/123456">
-    <img src="some_long_path_to_an_image_of_a_cup" alt="product:123456" />
-    <div class="product-name">Gold-plated Cups!</div>
-</div>
-<div class="product last-featured">
-    <img src="some_long_path_to_an_image_of_a_spoon" alt="product:123457" />
-    <div class="product-name">Gold-plated Spoons</div>
-</div>
-<div class="product">
-    <img src="some_long_path_to_an_image_of_a_doorknob" alt="product:123456" />
-    <div class="product-name">Gold-plated Doorknobs</div>
-</div>"""
+html = urlopen(url)
 
-bsoup = BeautifulSoup(html, 'html.parser')
-products = bsoup.findAll('div', {'class': 'product-name'})
+bsoup = BeautifulSoup(html.read(), 'html.parser')
+products = bsoup.findAll('div', {'class': {'product-name', 'featured'}})
     
 for product in products:
     product_name = product.get_text()
